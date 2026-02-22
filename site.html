@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>В.А. Васильев | Куратор Колледж "Царицыно"</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        cyber: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            900: '#134e4a',
+                            950: '#042f2e',
+                        },
+                        dark: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for a tech feel */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #14b8a6; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #0d9488; }
+        
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(45, 212, 191, 0.2);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(to right, #2dd4bf, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-dark-950 text-gray-300 font-sans antialiased selection:bg-cyber-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-panel border-b-0 border-t-0 border-x-0 border-cyber-500/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-3">
+                    <i data-lucide="cpu" class="text-cyber-400 h-8 w-8"></i>
+                    <div class="flex flex-col">
+                        <span class="font-mono font-bold text-xl text-white leading-none tracking-tight">В.А._<span class="text-cyber-400">Васильев</span></span>
+                        <span class="text-xs text-gray-400 font-mono mt-1">ГБПОУ Колледж «Царицыно»</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})" class="hover:text-cyber-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">О кураторе</button>
+                        <button onclick="document.getElementById('materials').scrollIntoView({behavior: 'smooth'})" class="hover:text-cyber-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">База знаний</button>
+                        <button onclick="document.getElementById('feed').scrollIntoView({behavior: 'smooth'})" class="hover:text-cyber-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">Лента новостей</button>
+                        <button onclick="document.getElementById('feedback').scrollIntoView({behavior: 'smooth'})" class="bg-cyber-600 hover:bg-cyber-500 text-white transition-colors px-4 py-2 rounded-md text-sm font-medium flex items-center gap-2">
+                            <i data-lucide="message-square-dashed" class="w-4 h-4"></i>
+                            Анонимная связь
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <!-- Decorative background pattern -->
+            <svg class="absolute left-0 top-0 h-full w-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M0 40L40 0H20L0 20M40 40V20L20 40" stroke="#2dd4bf" stroke-width="1" fill="none" opacity="0.3"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid-pattern)"/>
+            </svg>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel text-cyber-400 text-sm font-medium mb-6">
+                <span class="relative flex h-3 w-3">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyber-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-3 w-3 bg-cyber-500"></span>
+                </span>
+                Системы на связи. Пинг успешный.
+            </div>
+            <h2 class="text-2xl md:text-3xl text-cyber-400 font-mono font-medium mb-4">Владимир Аркадьевич Васильев</h2>
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+                Воспитываем <span class="gradient-text">профессионалов</span><br>и достойных граждан
+            </h1>
+            <p class="mt-4 text-xl text-gray-400 max-w-3xl mx-auto mb-10">
+                Официальная страница куратора ГБПОУ Колледж «Царицыно» для будущих специалистов по инфокоммуникационным сетям и компьютерным комплексам. Здесь мы учимся настраивать железо и строить будущее страны.
+            </p>
+            <div class="flex justify-center gap-4">
+                <button onclick="document.getElementById('materials').scrollIntoView({behavior: 'smooth'})" class="px-8 py-3 bg-cyber-600 hover:bg-cyber-500 text-white rounded-lg font-medium transition-all shadow-[0_0_15px_rgba(20,184,166,0.5)]">
+                    К учебным материалам
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission / About Section -->
+    <section id="about" class="py-16 bg-dark-900 relative border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-6">Код нашей группы: <span class="text-cyber-400 font-mono">Знания + Ответственность</span></h2>
+                    <p class="text-gray-400 mb-4 leading-relaxed">
+                        Приветствую! Меня зовут <strong class="text-gray-200">Владимир Аркадьевич Васильев</strong>. Я — ваш преподаватель и куратор в <strong class="text-gray-200">ГБПОУ Колледж «Царицыно»</strong>. Моя главная специализация — передача данных, организация интернет-соединений и глубокая диагностика ПК и оборудования. 
+                    </p>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Но моя цель как куратора — не только научить вас обжимать витую пару или находить неисправность на материнской плате. Моя миссия — помочь вам стать грамотными специалистами, понимающими ценность информационной безопасности, и достойными гражданами, способными развивать цифровую экономику нашей страны.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-300">
+                            <i data-lucide="check-circle-2" class="text-cyber-400 w-5 h-5"></i>
+                            <span>Актуальные знания по профилю IT</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-300">
+                            <i data-lucide="check-circle-2" class="text-cyber-400 w-5 h-5"></i>
+                            <span>Комфортная и безопасная образовательная среда</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-300">
+                            <i data-lucide="check-circle-2" class="text-cyber-400 w-5 h-5"></i>
+                            <span>Патриотическое и гражданское воспитание</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden glass-panel p-2">
+                    <!-- Placeholder for teacher's photo or college activity -->
+                    <div class="aspect-video bg-dark-800 rounded-xl flex items-center justify-center relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000" alt="Server rack tech" class="object-cover w-full h-full opacity-60 group-hover:opacity-80 transition-opacity duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-950 to-transparent opacity-80"></div>
+                        <div class="absolute bottom-4 left-4 right-4 text-center">
+                            <p class="font-mono text-cyber-400 font-semibold drop-shadow-md">Будущее ИТ-инфраструктуры создается здесь</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Study Materials (База знаний) -->
+    <section id="materials" class="py-20 bg-dark-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">База знаний</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Структурированные материалы для подготовки к практическим и лабораторным работам.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-panel rounded-xl p-6 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6 border border-blue-500/30">
+                        <i data-lucide="network" class="text-blue-400 h-6 w-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Системы передачи данных</h3>
+                    <p class="text-gray-400 mb-4 text-sm h-20">Модели OSI и TCP/IP, протоколы маршрутизации, основы построения инфокоммуникационных сетей.</p>
+                    <span class="text-cyber-400/40 cursor-not-allowed text-sm font-medium flex items-center gap-1" title="Материалы загружаются...">
+                        Открыть материалы <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </span>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-panel rounded-xl p-6 hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden">
+                    <!-- Highlight badge for currently active topic -->
+                    <div class="absolute top-0 right-0 bg-cyber-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">Текущая тема</div>
+                    
+                    <div class="w-12 h-12 bg-cyber-500/20 rounded-lg flex items-center justify-center mb-6 border border-cyber-500/30">
+                        <i data-lucide="globe" class="text-cyber-400 h-6 w-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Организация интернет-соединения</h3>
+                    <p class="text-gray-400 mb-4 text-sm h-20">Настройка роутеров, коммутаторов, VLAN, VPN-туннелирование и безопасность внешних сетей.</p>
+                    <span class="text-cyber-400/40 cursor-not-allowed text-sm font-medium flex items-center gap-1" title="Материалы загружаются...">
+                        Открыть материалы <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </span>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-panel rounded-xl p-6 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6 border border-purple-500/30">
+                        <i data-lucide="cpu" class="text-purple-400 h-6 w-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Диагностика ПК и оборудования</h3>
+                    <p class="text-gray-400 mb-4 text-sm h-20">Аппаратные неисправности, стресс-тесты, работа с POST-картами, восстановление данных.</p>
+                    <span class="text-cyber-400/40 cursor-not-allowed text-sm font-medium flex items-center gap-1" title="Материалы загружаются...">
+                        Открыть материалы <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Engagement Feed -->
+    <section id="feed" class="py-20 bg-dark-900 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between mb-12">
+                <h2 class="text-3xl font-bold text-white">Лента группы</h2>
+                <span class="text-gray-600 cursor-not-allowed flex items-center gap-2 text-sm" title="Все записи скоро будут доступны">
+                    Все записи <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </span>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Educational/News Post -->
+                <article class="bg-dark-800 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-cyber-500/30 transition-colors">
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-4 text-sm text-gray-400">
+                            <span class="bg-blue-500/10 text-blue-400 px-2 py-1 rounded font-medium">Технологии</span>
+                            <span>•</span>
+                            <span>2 часа назад</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Российские ОС: что нужно знать сетевому инженеру?</h3>
+                        <p class="text-gray-400 mb-4 line-clamp-3">
+                            В рамках импортозамещения все больше предприятий переходят на отечественные операционные системы (Astra Linux, РЕД ОС). Сегодня на паре мы разобрали, как настраивать сетевые интерфейсы через терминал в этих ОС...
+                        </p>
+                        <button class="text-cyber-400/40 font-medium cursor-not-allowed" disabled title="Полная версия статьи в разработке">Читать полностью</button>
+                    </div>
+                </article>
+
+                <!-- Educational/Values Post -->
+                <article class="bg-dark-800 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-cyber-500/30 transition-colors">
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-4 text-sm text-gray-400">
+                            <span class="bg-green-500/10 text-green-400 px-2 py-1 rounded font-medium">Важное</span>
+                            <span>•</span>
+                            <span>Вчера</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">ИТ-волонтерство: помогаем настраивать технику</h3>
+                        <p class="text-gray-400 mb-4 line-clamp-3">
+                            Настоящий профессионал определяется не только навыками, но и готовностью помочь. Наша группа запускает инициативу по бесплатной диагностике и базовой настройке ПК для пенсионеров нашего района...
+                        </p>
+                        <button class="text-cyber-400/40 font-medium cursor-not-allowed" disabled title="Форма регистрации скоро откроется">Присоединиться</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Anonymous Feedback Form (Безопасная среда) -->
+    <section id="feedback" class="py-20 relative overflow-hidden bg-dark-950">
+        <!-- Background glows -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-cyber-900/30 blur-[100px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="glass-panel p-8 md:p-12 rounded-2xl shadow-2xl">
+                <div class="text-center mb-8">
+                    <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-700">
+                        <i data-lucide="shield-check" class="text-cyber-400 w-8 h-8"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-white mb-2">Анонимная связь с куратором</h2>
+                    <p class="text-gray-400">
+                        Безопасная среда для ваших вопросов, предложений или сообщения о проблеме. 
+                        Анкетирование полностью анонимно. Никакие данные об IP или браузере не сохраняются.
+                    </p>
+                </div>
+
+                <form id="anonymousForm" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Тема обращения (опционально)</label>
+                        <select class="w-full bg-dark-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-cyber-500 focus:border-transparent transition-shadow">
+                            <option>Вопрос по учебе / практике</option>
+                            <option>Предложение по внеучебной активности</option>
+                            <option>Сообщение о конфликте / проблеме</option>
+                            <option>Другое</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Ваше сообщение</label>
+                        <textarea required rows="5" class="w-full bg-dark-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-cyber-500 focus:border-transparent transition-shadow resize-none placeholder-gray-500" placeholder="Напишите всё, что вас беспокоит или интересует..."></textarea>
+                    </div>
+                    
+                    <!-- Alert message container (hidden by default) -->
+                    <div id="formSuccess" class="hidden bg-cyber-900/50 border border-cyber-500 text-cyber-50 text-sm p-4 rounded-lg flex items-start gap-3">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-cyber-400 shrink-0"></i>
+                        <p>Ваше сообщение успешно и анонимно отправлено куратору. Спасибо за обратную связь!</p>
+                    </div>
+
+                    <button type="submit" class="w-full bg-cyber-600 hover:bg-cyber-500 text-white font-medium py-3 px-4 rounded-lg transition-all flex items-center justify-center gap-2 group">
+                        <span>Отправить безопасно</span>
+                        <i data-lucide="send" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-950 border-t border-gray-800 pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="cpu" class="text-gray-500 h-6 w-6"></i>
+                    <div class="flex flex-col text-left">
+                        <span class="font-mono font-bold text-gray-500 leading-none tracking-tight">В.А. Васильев</span>
+                        <span class="text-[10px] text-gray-600 font-mono mt-1">Колледж «Царицыно»</span>
+                    </div>
+                </div>
+                <p class="text-gray-600 text-sm text-center">
+                    Конкурсное испытание «Куратор года». <br class="md:hidden">Разработано для студентов ИТ-специальностей.
+                </p>
+                <div class="flex gap-4">
+                    <span class="text-gray-700 cursor-not-allowed transition-colors" title="Ссылка появится позже">
+                        <span class="sr-only">VK</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M23.45 5.948c.166-.546 0-.948-.795-.948H20.03c-.668 0-.976.347-1.143.73 0 0-1.335 3.196-3.226 5.272-.612.602-.89.793-1.224.793-.167 0-.418-.19-.418-.738V5.948c0-.656-.184-.948-.74-.948H9.151c-.417 0-.668.304-.668.593 0 .621.927.765 1.02 2.513v3.811c0 .833-.15 1.004-.484 1.004-.89 0-3.055-3.21-4.34-6.886-.249-.713-.5-1.003-1.172-1.003H.88c-.75 0-.9.347-.9.73 0 .682.89 4.07 4.145 8.551 2.17 3.06 5.225 4.72 8.008 4.72 1.67 0 1.875-.368 1.875-1.004V15.44c0-.736.156-.884.685-.884.39 0 1.057.19 2.615 1.667 1.78 1.75 2.073 2.533 3.075 2.533h2.625c.75 0 1.126-.368.91-1.096-.238-.724-1.088-1.775-2.215-3.022-.612-.71-1.53-1.475-1.808-1.858-.389-.491-.278-.71 0-1.147 0 0 3.2-4.426 3.5-5.933z" clip-rule="evenodd"></path>
+                        </svg>
+                    </span>
+                    <span class="text-gray-700 cursor-not-allowed transition-colors" title="Ссылка появится позже">
+                        <span class="sr-only">Telegram</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.888-.666 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Icons & Form Logic -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Handle Form Submission (Simulation)
+        document.getElementById('anonymousForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent page reload
+            
+            // Show success message
+            const successMsg = document.getElementById('formSuccess');
+            successMsg.classList.remove('hidden');
+            successMsg.classList.add('animate-pulse');
+            
+            setTimeout(() => {
+                successMsg.classList.remove('animate-pulse');
+            }, 1000);
+
+            // Clear the textarea
+            this.querySelector('textarea').value = '';
+            
+            // Optionally hide the message after a few seconds
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
